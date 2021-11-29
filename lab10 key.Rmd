@@ -1,0 +1,62 @@
+---
+title: "esm206_lab10"
+author: "Katherine Orellana"
+date: "11/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(usethis)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+
+```
+
+
+## beepr::beep()
+
+You can have R code that takes days/hours to run, beepr function will play sound when it is done running, its an alert
+
+Use beep to give yourself an audio alert.
+
+## for loop + beep
+
+
+```{r, eval = FALSE}
+for (i in rev(seq(1:999))) {
+  print(paste(i, "bottles of beer on the wall"))
+}
+
+beep(4)
+```
+
+
+## praise is nice
+
+Provides you with a nice message 
+```{r}
+praise("${EXCLAMATION}!!! This code works ${adverb_manner}!")
+
+praise("Holy ${creating}, Batman - this code works ${ADVERB_MANNER}!")
+
+```
+
+## cowsay::say to have characters say something 
+
+```{r}
+say("I love tacos", by = "shark")
+```
+
+## usethis for everything 
+
+Bunch of helper functions
+
+
